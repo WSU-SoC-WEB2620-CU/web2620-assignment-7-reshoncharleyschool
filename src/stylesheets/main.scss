@@ -5,22 +5,25 @@
         color: black;
         text-decoration: none;
     }
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     margin: 0;
     background-color: #eff3f4;
 }
-
+@mixin sides{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
 header{
     background-color: #64cefe;
     padding: 10px;
     h1{
-        font-weight: bolder;
+        font-weight: 900;
         font-size: 50px;
     }
     nav{
-        margin-left: 10vw;
-        margin-right: 10vw;
+        @include sides
     }
     ul{
         text-align: right;
@@ -37,7 +40,7 @@ header{
 
         }
         button{
-            background-color: #64cefe;; 
+            background-color: #64cefe; 
             border: 2px solid #fff; 
             color: #fff;
             padding: 10px 20px;
@@ -56,8 +59,7 @@ header{
     padding-bottom: 13rem;
     text-align: center;
     color: white;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    @include sides
 }
 
 .blackSpacer{
@@ -73,11 +75,10 @@ header{
     }
 }
 main{
-    margin-left: 10vw;
-    margin-right: 10vw;
+    @include sides;
     .cards{
         display: flex;
-        justify-content: flex-start;; 
+        justify-content: flex-start;
         flex-wrap: wrap;
         h4{
             color: #eff3f4;
@@ -88,7 +89,9 @@ main{
             padding-bottom: 50px;
         }
         .card{
-            
+            &:hover{
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
+                }
             color: lightgrey;
             background-color: #fff;
             border-radius: 10px;
@@ -124,13 +127,15 @@ main{
         display: flex;
         background-color: #eff3f4;
         .helloWorld{
-            width: 200px;
+            width: 250px;
             float: left;
         }
         .foo{
             width: 75px;
             float: right;
         }
+        padding: 0%;
+        margin: 0;
     }
     div{
         &:hover{
@@ -147,18 +152,21 @@ main{
         }
         h1{
             font-size: 35px;
+            font-weight: 900;
+            
         }
         h3{
-            font-size: 23px;
+            font-size: 20px;
         }
     }
 }
 
 footer{
     display: flex;
-    justify-content: flex-start;; 
+    font-size: 20px;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: #181b20;
     p{
         color: white;
     }
@@ -166,7 +174,10 @@ footer{
     a{
         color: #4463e1
     }
-    padding-left: 30vw;
+    padding-left: 20vw;
     padding-top: 2%;
     padding-bottom: 5%;
+    nav{
+        margin-left: 50px;
+    }
 }
